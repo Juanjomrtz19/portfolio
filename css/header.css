@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; 
+}
+
+header{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366 ;
+    height: 15vh;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    margin: 40px;
+    transition: color 0.3s ease;
+}
+
+i:hover{
+    color: #50c878;  
+}
+
+a:hover {
+    color: #50c878;
+}
+
+.gmail{
+    display: flex;
+    flex-direction: row;
+    transition: color 0.3s ease;
+}
+
+.gmail:hover, .gmail:hover i{
+    color: #50c878;
+}
+
+i{
+    padding-left: 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+#copiar{
+    position: relative;
+    left: -40px;
+}
+
+#copiar:hover{
+    cursor: pointer;
+}
+
+#copiar:hover + .mensaje-copiar{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.mensaje-copiar{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    transform: translateX(-50%);
+    padding: 5px;
+    color: #ffd700;
+    border-radius: 3px;
+    font-size: 15px;
+    z-index: 100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.linkedln{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    left: 8.1%;
+    padding: 5px;
+    color: #ffd700;
+    border-radius: 3px;
+    font-size: 15px;
+    z-index: 100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cv{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    left: 29.2%;
+    padding: 5px;
+    color: #ffd700;
+    border-radius: 3px;
+    font-size: 15px;
+    z-index: 100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.iconoLinkedln:hover + .linkedln{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.iconoCV:hover + .cv{
+    opacity: 1;
+    visibility: visible;
+}
+
+.enviar-gmail{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    left: 48%;
+    padding: 5px;
+    color: #ffd700;
+    border-radius: 3px;
+    font-size: 15px;
+    z-index: 100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gmail:hover + .enviar-gmail{
+    opacity: 1;
+    visibility: visible;
+}
+
+.content-img{
+    height: 15vw;
+    width: 15vw;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.fotoPerfil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo-foto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Tablets grandes (en modo paisaje) */
+@media screen and (max-width: 1300px) {
+    
+    i, a{
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+}
+
+/* Tablets (en modo retrato) */
+@media screen and (max-width: 1000px) {
+    header{
+        padding: 10px;
+        margin: 0;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Tablets pequeñas (en modo paisaje) */
+@media screen and (max-width: 800px) {
+
+}
+
+/* Tablets pequeñas (en modo retrato) */
+@media screen and (max-width: 600px) {
+   nav{
+    display: none;
+   }
+}
+
+/* iPhone 8 Plus, 7 Plus, 6S Plus, 6 Plus (y dispositivos de tamaño similar) en modo retrato */
+@media screen and (max-width: 414px) {
+    body {
+        /* Tus estilos para estos modelos de iPhone más grandes aquí */
+    }
+}
+
+/* iPhone X, iPhone 8, 7, 6S, 6 (y dispositivos de tamaño similar) en modo retrato */
+@media screen and (max-width: 375px) {
+    body {
+        /* Tus estilos para iPhone X, iPhone 8, 7, 6S, 6 aquí */
+    }
+}
+
+/* Teléfonos más pequeños (modelos más antiguos de iPhone y otros dispositivos) */
+@media screen and (max-width: 320px) {
+    body {
+        /* Tus estilos para teléfonos más pequeños aquí */
+    }
+}
