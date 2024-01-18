@@ -7,17 +7,174 @@ main{
 
 .grid-container{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
-.presentacion{
+.grid-container article{
     background-color: #d3d3d3;
     padding: 20px;
     border: black 2px solid;
 }
-.presentacion h2, p{
+
+.presentacion{
+    grid-column: 1 / 2;
+}
+
+.tecnologias{
+    grid-column: 2 / 4;
+}
+main h2{
     color: #003366;
 }
 
-.presentacion p{
+article p{
+    color: #003366;
+    text-align: left;
+    margin-top: 2.5%;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.img-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    margin-top: 2.5%;
+}
+
+.tecnologias-img-container{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.tecnologias-img-container img{
+    height: 100%;
+    width: 100%;
+}
+
+.proyectos{
+    grid-column: 1/ 4;
+}
+
+.proyectos-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proyecto-container{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    background-color: #003366;
+    margin-top: 3%;
+    border-radius: 15%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.proyecto-container h3{
+    max-width: 100%;
+    text-align: center;
+}
+
+.proyectos-flex h3{
+    margin-top: 5%;
+    color: #ffd700;
+}
+
+.proyectos-flex a{
+    text-decoration: none;
+    transition: transform 0.3s ease
+}
+
+.proyecto-img-container{
+    min-width: 200px;
+    min-height: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.proyecto-img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+main a:hover{
+    transform: scale(1.3);
+}
+@media screen and (max-width: 1350px) {
+    .proyectos-flex{
+        flex-direction: column;
+    }
+} 
+
+@media screen and (max-width: 1025px) {
+
+} 
+
+/* Tablets pequeñas (en modo paisaje) */
+@media screen and (max-width: 900px) {
+    .grid-container p{
+        text-align: start;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container article{
+        grid-column: 1 / 4;
+    }
 
 }
+@media screen and (max-width: 600px) {
+    main{
+        margin-top: 15vh;
+    }
+
+    .img-flex{
+        flex-direction: column;
+    }
+
+    .tecnologias-img-container{
+        margin-top: 2%;
+    }
+}
+ /* iPhone 8 Plus, 7 Plus, 6S Plus, 6 Plus (y dispositivos de tamaño similar) en modo retrato */
+ @media screen and (max-width: 414px) {
+
+    .proyecto-container{
+        transform: scale(0.8);
+
+    }
+ }
+ 
+ /* iPhone X, iPhone 8, 7, 6S, 6 (y dispositivos de tamaño similar) en modo retrato */
+ @media screen and (max-width: 375px) {
+     .menu-oculto a{
+         font-size: 15px;
+     }
+     h1{
+         margin-right: 20%;
+     }
+ 
+     header{
+         flex-direction: column;
+     }
+
+ }
+ 
+ /* Teléfonos más pequeños (modelos más antiguos de iPhone y otros dispositivos) */
+ @media screen and (max-width: 320px) {
+     body {
+         /* Tus estilos para teléfonos más pequeños aquí */
+     }
+ }

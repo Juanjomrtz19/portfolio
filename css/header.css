@@ -255,7 +255,10 @@ i{
 }
 
 /* Tablets (en modo retrato) */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1025px) {
+    *{
+        box-sizing: border-box; /* Añade esto aquí */
+    }
     header{
         padding: 10px;
         margin: 0;
