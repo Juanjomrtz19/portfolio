@@ -1,0 +1,23 @@
+main{
+    min-height: calc(100vh - 50px);
+    background: linear-gradient(#003366, #d3d3d3);
+    padding: 40px;
+    overflow-x: hidden;
+}
+
+.grid-container{
+    display: grid;
+}
+
+.presentacion{
+    background-color: #d3d3d3;
+    padding: 20px;
+    border: black 2px solid;
+}
+.presentacion h2, p{
+    color: #003366;
+}
+
+.presentacion p{
+
+}

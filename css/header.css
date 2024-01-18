@@ -13,6 +13,9 @@ header{
     align-items: center;
     background-color: #003366 ;
     height: 15vh;
+    min-height: 15vh;
+    max-height: 15vh;
+    border-bottom: #d3d3d3 solid 3px;
 }
 
 nav{
@@ -143,8 +146,10 @@ i{
 }
 
 .content-img{
-    height: 15vw;
-    width: 15vw;
+    height: 150px;
+    width: 150px;
+    min-width: 50px;
+    min-height: 50px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
@@ -162,6 +167,71 @@ i{
     align-items: center;
 }
 
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Se queda fijo en el lugar */
+    z-index: 140; /* Se sitúa sobre los demás elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Si es necesario, añade una barra de desplazamiento */
+    background-color: rgb(0,0,0); /* Fondo negro */
+    background-color: rgba(0,0,0,0.9); /* Negro con opacidad */
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Ajusta según tus necesidades */
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #50c878;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #d3d3d3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-oculto{
+    display: none;
+    height: calc(100% - 15vh);
+    width: 0;
+    position: fixed;
+    z-index: 210;
+    top: 15vh;
+    right: 0;
+    background-color: #003366;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu-visible{
+    width: 100%;
+}
+
+.menu-oculto a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffd700;
+    display: block;
+    transition: 0.3s;
+}
+  
+
 /* Tablets grandes (en modo paisaje) */
 @media screen and (max-width: 1300px) {
     
@@ -173,6 +243,15 @@ i{
         font-size: 20px;
     }
 
+    .content-img{
+        height: 15vw;
+        width: 15vw;
+    }
+
+}
+
+.menu{
+    display: none;
 }
 
 /* Tablets (en modo retrato) */
@@ -181,13 +260,14 @@ i{
         padding: 10px;
         margin: 0;
         flex-direction: column;
-        height: 100%;
+        min-height: none;
+        max-height: none;
         width: 100%;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+        min-height: none;
+        max-height: none;
+        height: 100%;
     }
-}
+} 
 
 /* Tablets pequeñas (en modo paisaje) */
 @media screen and (max-width: 800px) {
@@ -196,9 +276,32 @@ i{
 
 /* Tablets pequeñas (en modo retrato) */
 @media screen and (max-width: 600px) {
-   nav{
+   header{
+    height: 0;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    width: 100%;
+    justify-content: center;
+   }
+   
+    nav{
     display: none;
    }
+
+   .menu{
+    display: block;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+   }
+
+   .menu-oculto{
+    display: block;
+   }
+
 }
 
 /* iPhone 8 Plus, 7 Plus, 6S Plus, 6 Plus (y dispositivos de tamaño similar) en modo retrato */
@@ -210,8 +313,15 @@ i{
 
 /* iPhone X, iPhone 8, 7, 6S, 6 (y dispositivos de tamaño similar) en modo retrato */
 @media screen and (max-width: 375px) {
-    body {
-        /* Tus estilos para iPhone X, iPhone 8, 7, 6S, 6 aquí */
+    .menu-oculto a{
+        font-size: 15px;
+    }
+    h1{
+        margin-right: 20%;
+    }
+
+    header{
+        flex-direction: column;
     }
 }
 

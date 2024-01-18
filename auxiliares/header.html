@@ -1,18 +1,29 @@
-<link rel ="stylesheet" type="text/css" href="../css/header.css">
+<link rel ="stylesheet" type="text/css" href="css/header.css">
 <header>
     <div class="titulo-foto">
         <div class="content-img">
-            <img class="fotoPerfil" src="../img/fotoPerfil.jpeg" alt="">     
+            <img class="fotoPerfil" id="foto-perfil" src="img/fotoPerfil.jpeg" alt=""> 
+            <div id="modal" class="modal">
+                <span class="cerrar">&times;</span>
+                <img class="modal-contenido" id="imagenAmpliada">  
+            </div>    
         </div>
-        <h1><a href="../index.html">Juan José Martínez Águila</a></h1>
+        <h1><a href="./index.html">Juan José Martínez Águila</a></h1>
+        <i class="fa-solid fa-bars menu" id="menuBars"></i>
     </div>
     
+    <div id="menuDeslizante" class="menu-oculto">
+        <a href="https://www.linkedin.com/in/juan-josé-martínez-águila-981a01208">Linkedln</a>
+        <a href="">Curriculum</a>
+        <a href="mailto:jjmartagi@gmail.com">Correo: jjmartagui@gmail.com</a>
+    </div>
+
     <nav>
-        <a href="" class="iconoLinkedln"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/juan-josé-martínez-águila-981a01208" class="iconoLinkedln"><i class="fa-brands fa-linkedin"></i></a>
         <span id="linkedln" class="linkedln">Linkedln</span>
         <a href="" class="iconoCV"><i class="fa-solid fa-file"></i></a>
         <span id="cv" class="cv">CV</span>
-        <a href="" class="gmail">jjmartagui@gmail.com<i class="fa-solid fa-envelope"></i></a>
+        <a href="mailto:jjmartagi@gmail.com" class="gmail">jjmartagui@gmail.com<i class="fa-solid fa-envelope"></i></a>
         <span id="enviarGmail" class="enviar-gmail">Enviar correo</span>
         <i class="fa-solid fa-copy" id="copiar"></i>
         <span id="mensajeCopiar" class="mensaje-copiar">Copiar</span>
