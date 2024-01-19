@@ -234,7 +234,21 @@ i{
 
 /* Tablets grandes (en modo paisaje) */
 @media screen and (max-width: 1300px) {
+    *{
+        box-sizing: border-box; /* Añade esto aquí */
+    }
+
+    header{
+        padding: 10px;
+        margin: 0;
+        flex-direction: column;
+        min-height: none;
+        max-height: none;
     
+        height: 100%;
+    }
+
+
     i, a{
         font-size: 15px;
     }
@@ -242,7 +256,7 @@ i{
     h1{
         font-size: 20px;
     }
-
+ 
     .content-img{
         height: 15vw;
         width: 15vw;
@@ -256,20 +270,7 @@ i{
 
 /* Tablets (en modo retrato) */
 @media screen and (max-width: 1025px) {
-    *{
-        box-sizing: border-box; /* Añade esto aquí */
-    }
-    header{
-        padding: 10px;
-        margin: 0;
-        flex-direction: column;
-        min-height: none;
-        max-height: none;
-        width: 100%;
-        min-height: none;
-        max-height: none;
-        height: 100%;
-    }
+
 } 
 
 /* Tablets pequeñas (en modo paisaje) */
