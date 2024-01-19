@@ -5,7 +5,7 @@ main{
     overflow-x: hidden;
 }
 
-.container-flex-main{
+.container-main-flex{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,29 +13,53 @@ main{
     flex-direction: column;
 }
 
-.descripcion-chatbot{
+#slider{
+    position: relative;
+    width: 700px;
+    height: 500px;
+}
+
+.slide{
+    margin-top: 5%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d3d3d3;
+    opacity: 0.8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #003366;
+}
+
+#prev { left: -50px; }
+#next { right: -50px; }
+
+.main-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
-.descripcion-chatbot article{
+.main-grid-container article{
     background-color: #d3d3d3;
     padding: 20px;
     border: black 2px solid;
 }
 
-.tecnologias-usadas{
-    grid-column: 1 / 2;
-    
-}
 
-.informacion{
-    grid-column: 2 / 4;
-}
-
-.descripcion-chatbot p{
+.main-grid-container p{
     color: #003366;
     text-align: left;
     margin-top: 2.5%;
@@ -72,13 +96,16 @@ h2{
     align-items: center;
 }
 
-.fa-file-pdf{
-    color: #003366;
-    margin-top: 2%;
+.tecnologias-usadas{
+    grid-column: 1 / 2;
 }
 
-@media screen and (max-width: 1300px) {
+.informacion{
+    grid-column: 2 / 4;
+}
 
+
+@media screen and (max-width: 1300px) {
 
 }
 
@@ -89,26 +116,32 @@ h2{
 
 /* Tablets pequeñas (en modo paisaje) */
 @media screen and (max-width: 900px) {
-    video{
-        width: 620px;
-        height: 540px;
+    #slider{
+        position: relative;
+        width: 600px;
+        height: 400px;
     }
 
-    .descripcion-chatbot{
+    .main-grid-container{
         grid-template-columns: 1fr;
     }
 
-    .descripcion-chatbot article{
-        grid-column: 1 / 4;
-    }
+    #prev { left: -25px; }
+    #next { right: -25px; }
 }
 
 @media screen and (max-width: 700px) {
-    video{
-        width: 420px;
-        height: 340px;
+    .tecnologias-usadas{
+        grid-column: 1 / 4;
+        height: auto;
+    }
+    
+    .informacion{
+        grid-column: 1 / 4;
     }
 
+    #prev { left: 50px; }
+    #next { right: 50px; }
 }
 
 /* Tablets pequeñas (en modo retrato) */
@@ -117,27 +150,39 @@ h2{
         margin-top: 15vh;
     }
 
-
-
+    #slider{
+        position: relative;
+        width: 500px;
+        height: 300px;
+    }
 }
 
 /* iPhone 8 Plus, 7 Plus, 6S Plus, 6 Plus (y dispositivos de tamaño similar) en modo retrato */
 @media screen and (max-width: 414px) {
-    video{
-        width: 220px;
-        height: 140px;
-        margin-top: 15%;
+    #prev, #next{
+        transform: scale(0.8);
+        
     }
+
+    #prev { left: 70px; }
+    #next { right: 70px; }
 }
 
 /* iPhone X, iPhone 8, 7, 6S, 6 (y dispositivos de tamaño similar) en modo retrato */
 @media screen and (max-width: 375px) {
+    #slider{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        margin-bottom: 10%;
+    }
 
+    h1{
+        font-size: 25px;
+    }
 }
 
 /* Teléfonos más pequeños (modelos más antiguos de iPhone y otros dispositivos) */
 @media screen and (max-width: 320px) {
-    body {
-        /* Tus estilos para teléfonos más pequeños aquí */
-    }
+
 }

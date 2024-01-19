@@ -5,37 +5,28 @@ main{
     overflow-x: hidden;
 }
 
-.container-flex-main{
+.main-flex-container{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    flex-direction: column;
 }
 
-.descripcion-chatbot{
+.main-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin-top: 5%;
 }
 
-.descripcion-chatbot article{
+.main-grid-container article{
     background-color: #d3d3d3;
     padding: 20px;
     border: black 2px solid;
 }
 
-.tecnologias-usadas{
-    grid-column: 1 / 2;
-    
-}
 
-.informacion{
-    grid-column: 2 / 4;
-}
-
-.descripcion-chatbot p{
+.main-grid-container p{
     color: #003366;
     text-align: left;
     margin-top: 2.5%;
@@ -62,7 +53,7 @@ h2{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 35%;
+    margin-top: 15%;
 }
 
 .informacion-pdf-container{
@@ -72,13 +63,15 @@ h2{
     align-items: center;
 }
 
-.fa-file-pdf{
-    color: #003366;
-    margin-top: 2%;
+.tecnologias-usadas{
+    grid-column: 1/ 2;
+}
+
+.informacion{
+    grid-column: 1 / 4;
 }
 
 @media screen and (max-width: 1300px) {
-
 
 }
 
@@ -89,45 +82,23 @@ h2{
 
 /* Tablets pequeñas (en modo paisaje) */
 @media screen and (max-width: 900px) {
-    video{
-        width: 620px;
-        height: 540px;
-    }
 
-    .descripcion-chatbot{
-        grid-template-columns: 1fr;
-    }
-
-    .descripcion-chatbot article{
-        grid-column: 1 / 4;
-    }
 }
 
 @media screen and (max-width: 700px) {
-    video{
-        width: 420px;
-        height: 340px;
-    }
 
 }
 
 /* Tablets pequeñas (en modo retrato) */
 @media screen and (max-width: 600px) {
     main{
-        margin-top: 15vh;
+        margin-top: 15v;
     }
-
-
-
 }
 
 /* iPhone 8 Plus, 7 Plus, 6S Plus, 6 Plus (y dispositivos de tamaño similar) en modo retrato */
 @media screen and (max-width: 414px) {
-    video{
-        width: 220px;
-        height: 140px;
-        margin-top: 15%;
-    }
+
 }
 
 /* iPhone X, iPhone 8, 7, 6S, 6 (y dispositivos de tamaño similar) en modo retrato */
@@ -137,7 +108,5 @@ h2{
 
 /* Teléfonos más pequeños (modelos más antiguos de iPhone y otros dispositivos) */
 @media screen and (max-width: 320px) {
-    body {
-        /* Tus estilos para teléfonos más pequeños aquí */
-    }
+
 }

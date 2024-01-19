@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan José Martínez Águila</title>
+    <script src="https://kit.fontawesome.com/eee8b9a576.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <main>
+        <section class="container-main-flex">
+            <h1>Buscador de los Simpsons</h1>
+
+            <section id="slider">
+                <div class="slide" style="background-image: url('img/img-simpson/ri1.png');"></div>
+                <div class="slide" style="background-image: url('img/img-simpson/ri2.png');"></div>
+                <div class="slide" style="background-image: url('img/img-simpson/ri3.png');"></div>
+                <div class="slide" style="background-image: url('img/img-simpson/ri4.png');"></div>
+                <button id="prev">Anterior</button>
+                <button id="next">Siguiente</button>    
+            </section>
+        </section>
+
+        <section class="main-grid-container">
+            <article class = "tecnologias-usadas descripcion-itemgrid">
+                <h2>Tecnologías usadas</h2>
+                <div class="tecnologias-img-flex">
+                    <div class="tecnologias-img-container">
+                        <img src="img/java.png" alt="">
+                    </div>
+                </div>
+            </article>
+
+            <article class="informacion descripcion-itemgrid">
+                <h2>Descripción del problema</h2>
+                <p>Este proyecto lo realicé junto a otro compañero y teniamos que hacer un buscador de capítulos de los Simpsons.</p>
+                <p>En resumidas cuentas una aplicación en java utilizando la bibliteca lucene que indexará sobre una serie de documentos 
+                    (CSVs con información de capítulos de los simpsons).
+                </p>
+                <p>Una vez hechá esta indexación el usuario solo tendrá que realizar consultas en la aplicación ya sea buscando por el título
+                    del capítulo o del guión y la aplicación tendrá que devolver un ranking de documentos que cumpla las necesidades de la consulta 
+                    del usuario.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <link rel ="stylesheet" type="text/css" href="css/simpson.css">
+    <script src="js/header.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
