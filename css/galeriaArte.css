@@ -92,13 +92,28 @@ h2{
 /* Tablets pequeñas (en modo retrato) */
 @media screen and (max-width: 600px) {
     main{
-        margin-top: 15v;
+        margin-top: 15vh;
+    }
+
+    .main-grid-container{
+        grid-template-columns: 1fr;
+    }
+    .tecnologias-usadas{
+        grid-column: 1/ 4;
+    }
+    
+    .informacion{
+        grid-column: 1 / 4;
     }
 }
 
 /* iPhone 8 Plus, 7 Plus, 6S Plus, 6 Plus (y dispositivos de tamaño similar) en modo retrato */
 @media screen and (max-width: 414px) {
-
+    .tecnologias-img-flex{
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
 }
 
 /* iPhone X, iPhone 8, 7, 6S, 6 (y dispositivos de tamaño similar) en modo retrato */
